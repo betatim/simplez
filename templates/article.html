@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}{{ article.title|striptags }} - {{ SITENAME }}{% endblock %}
+
+{% block content %}
+    <section id="content">
+        <article>
+            <header class="title">
+                <h1>
+                    <!--<a href="{{ SITEURL }}/{{ article.url }}"
+                       rel="bookmark"
+                       title="Permalink to {{ article.title|striptags }}">
+                        {{ article.title }}
+                    </a>-->
+		    {{ article.title }}
+                </h1>
+		<div class="when">25 March 2014</div>
+            </header>
+            <div class="entry-content">
+                {{ article.content }}
+            </div>
+            <!-- /.entry-content -->
+        </article>
+    </section>
+
+{% endblock %}
