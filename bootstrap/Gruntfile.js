@@ -308,7 +308,13 @@ module.exports = function (grunt) {
           'fonts/*'
         ],
         dest: 'docs/dist'
-      }
+      },
+      statictheme: {
+        expand: true,
+        cwd: 'dist',
+	src: '**',
+        dest: '../static/'
+      },
     },
 
     connect: {
@@ -443,7 +449,7 @@ module.exports = function (grunt) {
   grunt.registerTask('dist-docs', 'copy:docs');
 
   // Full distribution task.
-  grunt.registerTask('dist', ['clean', 'dist-css', 'copy:fonts', 'dist-js', 'dist-docs']);
+  grunt.registerTask('dist', ['clean', 'dist-css', 'copy:fonts', 'dist-js', 'dist-docs', 'copy:statictheme']);
 
   // Default task.
   grunt.registerTask('default', ['test', 'dist', 'build-glyphicons-data', 'build-customizer', 'update-shrinkwrap']);
