@@ -75,6 +75,10 @@ p {
   }
 }
 
+.rendered_html p {
+  margin: 0;
+}
+
 
 // Emphasis & misc
 // -------------------------
@@ -305,4 +309,12 @@ address {
   margin-bottom: @line-height-computed;
   font-style: normal;
   line-height: @line-height-base;
+}
+
+// figures and captions
+figcaption {
+  font-size: (@font-size-base - 4); // around 12px
+  .fname {
+    font-family: @font-family-monospace;
+  }
 }
