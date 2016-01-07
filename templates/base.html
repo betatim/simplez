@@ -45,6 +45,20 @@
       ga('send', 'pageview');
     </script>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" type="text/javascript"></script>
+
+    <!-- <script type="text/javascript" src="/interactive/main-built.js" charset="utf-8"></script>-->
+    <script type="text/javascript" src="https://cdn.rawgit.com/oreillymedia/thebe/17fe0971303cac24d7e806c8f1bc8ba3c0c40b23/static/main-built.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.10.0/codemirror.min.css">
+    <script>
+      $(function(){
+	      new Thebe({url:"https://tmpnb.org/",
+		      kernel_name: "python3",
+		      load_mathjax: false,
+		      container_selector: "div.entry-content"});
+      });
+    </script>
+
     <!-- extra stuff for nbconvert -->
     {% if EXTRA_HEADER %}
 	{{ EXTRA_HEADER }}
@@ -142,6 +156,26 @@
       div.prompt {
       display: none;
       }
+      div.thebe_controls {
+      margin-top: 5px;
+      margin-bottom: 20px;
+      }
+      div.thebe_controls button {
+      background-color: #eaeaea;
+      font-size: 1em;
+      padding: 5px 20px;
+      }
+      div.kernel_controls {
+      padding: 20px;
+      background: rgba(200, 200, 200, 0.4);
+      max-width: 600px;
+      text-align: center;
+      margin: 10px auto;
+      }
+      div.cell div.thebe_wrap div.input {
+      border: 1px solid #c8c8c8;
+      padding: 10px;
+      }
     </style>
 
   </head>
@@ -192,8 +226,6 @@
 
     {% include 'includes/footer.html' %}
     
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="/theme/js/bootstrap.min.js"></script>
   </body>
