@@ -3,13 +3,16 @@
 
 {% block content %}
     {% if articles %}
-      <ul class="listing">
-        {% for article in (articles_page.object_list if articles_page else articles) %}
-           <article>
-	     <li>
-               <span>{{ article.locale_date }}</span> <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a>
-             </li>
-           </article>
-        {% endfor %}
+    <h1>Posts</h1>
+    <ul class="listing">
+      {% for article in (articles_page.object_list if articles_page else articles) %}
+        <li>
+          <span class="d-lg-flex justify-content-between">
+            <a href="/{{ article.url }}">{{ article.title }}</a>
+            <small class="d-none d-md-inline">{{ article.locale_date }}</small>
+          </span>
+        </li>
+      {% endfor %}
+    </ul>
     {% endif %}
 {% endblock content %}

@@ -1,0 +1,40 @@
+$red: #c00;
+$pink: #e21181;
+$primary: $red;
+
+$paragraph-margin-bottom: 1rem;
+
+$enable-responsive-font-sizes: true;
+
+.social a {
+  color: inherit;
+  :hover {
+    color: $red;
+  }
+}
+
+a.anchor-link {
+  display: none;
+}
+
+.prompt {
+  display: none;
+}
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+h2, h3, h4 {
+  margin-top: 2 * $paragraph-margin-bottom;
+}
+
+h1 {
+  margin-bottom: 2 * $paragraph-margin-bottom;
+}
+
+// make all images responsive by default. Checkout this issue
+// https://github.com/twbs/bootstrap/issues/18178 to see why bootstrap
+// doesn't do this by default and when it'll break
+img {
+  max-width: 100%;
+  height: auto;
+}

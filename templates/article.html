@@ -2,24 +2,16 @@
 {% block title %}{{ article.title|striptags }} - {{ SITENAME }}{% endblock %}
 
 {% block content %}
-    <section id="content">
-        <article>
-            <header class="title">
-                <h1>
-                    <!--<a href="{{ SITEURL }}/{{ article.url }}"
-                       rel="bookmark"
-                       title="Permalink to {{ article.title|striptags }}">
-                        {{ article.title }}
-                    </a>-->
-		    {{ article.title }}
-                </h1>
-		<div class="when">{{ article.locale_date }}</div>
-            </header>
-            <div class="entry-content">
-                {{ article.content }}
-            </div>
-            <!-- /.entry-content -->
-        </article>
-    </section>
+<article>
+  <header class="title">
+    <h1>
+      {{ article.title }}
+    </h1>
+    <div class="when small mb-3">{{ article.locale_date }}</div>
+  </header>
+  <div class="entry-content">
+    {{ article.content }}
+  </div>
+</article>
 
 {% endblock %}
