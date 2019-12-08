@@ -18,3 +18,5 @@ _site
 # OS or Editor folders
 .DS_Store
 ._*
+node_modules
+.sass-cache
