@@ -14,11 +14,11 @@
     <h1>
       {{ article.title }}
     </h1>
-    <div class="when small mb-3">{{ article.locale_date }}</div>
+    <time class="when d-block small mb-3">{{ article.locale_date }}</time>
   </header>
-  <div class="entry-content">
+  <article>
     {{ article.content }}
-  </div>
+  </article>
 </article>
 
 {% endblock %}
