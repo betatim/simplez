@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="feed" href="/feeds/all.atom.xml" title="Articles">
 
+    {# Use this to add canonical links from the article #}
+    {% block meta %}{% endblock %}
+
     <title>{% block title %}{% endblock %}</title>
 
     {% if FAVICON %}
