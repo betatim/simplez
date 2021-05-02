@@ -31,6 +31,10 @@ h1 {
   margin-bottom: 2 * $paragraph-margin-bottom;
 }
 
+pre {
+  padding: 1em;
+}
+
 // make all images responsive by default. Checkout this issue
 // https://github.com/twbs/bootstrap/issues/18178 to see why bootstrap
 // doesn't do this by default and when it'll break

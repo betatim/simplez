@@ -15,5 +15,5 @@ the custom CSS.
 
 ## Templates
 
-All the Pelian specific stuff is in `templates/`. The `static/` folder should
+All the Pelican specific stuff is in `templates/`. The `static/` folder should
 contain the built CSS as well as the Pygments style sheet for code highlighting.
