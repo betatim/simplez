@@ -23,6 +23,13 @@ a.anchor-link {
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 
+
+blockquote {
+  border-left: 8px solid $gray-300;
+  padding-left: 1rem;
+  font-style: italic;
+}
+
 h2, h3, h4 {
   margin-top: 2 * $paragraph-margin-bottom;
 }
